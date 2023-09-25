@@ -1,2 +1,2 @@
 # Scaler
-This repository is used for recording everything I have learned from Scaler Academy
+This repository is used to record everything that I have learned from Scaler Academy
