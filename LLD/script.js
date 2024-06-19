@@ -45,6 +45,83 @@ console.log("PI -> ", pi);
 
 
 
+// Data Type in JavaScript
+// 1. Primitive
+// 2. Reference
 
 
+// Primitive 
+// 1. Number
+// 2. String
+// 3. Boolean
+// 4. Undefined
+// 5. Null
+// 6. Symbol
+
+
+
+// Reference
+// 1. Function
+// 2. Array
+// 3. Object
+
+
+
+console.log('Data Types');
+// Primitive
+// Numbers
+let aa = 1;
+console.log('aa -> ', aa);
+
+// Decimal
+aa = 0.121212;
+console.log('aa -> ', aa);
+
+
+aa = -102.2;
+console.log('aa -> ', aa);
+
+// Undefined 
+aa = 2/0;
+console.log('aa -> ', aa);
+
+// Not a Number
+aa = "hello"/ 0;
+console.log('aa -> ', aa);
+
+
+// Strings
+aa = "Data Type is String"
+console.log('aa -> ', aa);
+
+aa = 'JS';
+console.log('aa -> ', aa);
+
+
+
+// Strings with Variables
+let message = 'This is a ' + aa + " file.";
+console.log("Message -> ", message);
+
+// Inside backtick(`), ${variable_name}
+message = `This is a ${aa} file.`;
+console.log("Message -> ", message);
+
+
+// Boolean
+let isMay = true;
+console.log("Is this May? ", isMay);
+
+isMay = false;
+console.log("Is this May? ", isMay);
+
+
+// Undefined - This happens when memory is allocated but no value is set for the variable
+let course;
+console.log("Course -> ", course);
+
+
+// Null -> Value for the variable DO NOT EXIST (Nothing or Empty)
+let marks = null;
+console.log("Marks -> ", marks);
 
