@@ -167,3 +167,43 @@ console.log("Array -> ", arr);
 // Delete from Start
 arr.shift();
 console.log("Array -> ", arr);
+
+
+// Objects
+// Key - Value Pairs
+let person = {
+    name: 'JK',
+    age: 26,
+    isMale: false,
+    interests: ["SZ", "EXO"],
+    address: {
+        country: 'India',
+        city: {
+            name: "Vijayawada",
+            pincode: 520001
+        }
+    }, 
+    attributes : function() {
+        return "Don't mess up my tempo";
+    }
+}
+
+console.log("Person -> ", person);
+
+// Accessing Elements of an Object
+console.log("Person's name is ", person["name"]);  // Bracket Notation
+console.log("Person is from ", person.address.city.name); // Dot Walking 
+console.log("Person's motto is ", person.attributes());
+console.log("Person's Interests are", person.interests[1]);
+
+
+
+// Adding a property in Object
+person.isBored = true;
+console.log("Is Person not interested", person.isBored);
+
+
+console.log("Person's Entire data before deletion \n", person);
+// Deleting a property
+delete person.isBored;
+console.log("Person's Entire data after deletion \n", person);
