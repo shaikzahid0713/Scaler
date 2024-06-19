@@ -125,3 +125,45 @@ console.log("Course -> ", course);
 let marks = null;
 console.log("Marks -> ", marks);
 
+
+// Reference Types
+// Functions
+// function_declaration function_name(parameters) {
+//     function_body;
+// }
+
+function sum(a, b) {
+    return a + b;
+}
+
+console.log("Sum -> ", sum(4, 5));
+
+
+// Arrays
+// Collection of heterogenous elements
+// Index starts from 0 to length - 1
+let arr = [1, 2.5, "HI", true, [2, 3, 4]];
+console.log("Array -> ", arr);
+
+
+// Array Methods
+console.log("Length of Array -> ", arr.length);
+
+// Add Elements at End
+arr.push(false);
+console.log("Array -> ", arr);
+
+
+// Delete an Element from end
+arr.pop();
+console.log("Array -> ", arr);
+
+
+
+// Add Elements at Beginning -> Unshift
+arr.unshift(0.5);
+console.log("Array -> ", arr);
+
+// Delete from Start
+arr.shift();
+console.log("Array -> ", arr);
