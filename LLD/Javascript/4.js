@@ -92,51 +92,106 @@
 // }) 
 
 
+// Array Methods
+// Map Method
 // Given an array of integers, return Square of them
 // Approach-1: Loop
-let arr = [1, 2, 3];
-let square = [];
-arr.forEach((x) => {
-    square.push(x * x);
-})
+// console.log("----------- Map Operator -----------");
+// let arr = [1, 2, 3];
+// let square = [];
+// arr.forEach((x) => {
+//     square.push(x * x);
+// })
+// console.log("Array -> ", arr);
+// console.log("Using Loop -> ", square);
+
+
+// // Approach-2: Function
+// function squareArray(arr) {
+//     let squareUsingFunction = [];
+//     let n = arr.length;
+//     for (let i = 0; i < n; i++) {
+//         let x = Math.pow(arr[i], 2);
+//         squareUsingFunction.push(x);
+//     }
+//     return squareUsingFunction;
+// }
+
+// console.log("Using Function -> ", squareArray(arr));
+
+// // Approach-3: Map Operator
+// let squareUsingMap = arr.map(function(element) {
+//     return element * element;
+// })
+
+// console.log("Using Map -> ", squareUsingMap);
+
+// let squareMapInline = arr.map(element => element * element);
+// console.log("Inline Map -> ", squareMapInline);
+
+
+// // Convert USD to Rupees
+// const usd = [100, 15000, 180];
+// const conversationRatio = 84;
+
+// let conversionUsingMap = usd.map(function(element) {
+//     return element * conversationRatio;
+// })
+
+// console.log("INR Conversion Using Map -> ", conversionUsingMap);
+
+
+// let conversionInline =  usd.map(element => element * conversationRatio);
+// console.log("Inline Conversion -> ", conversionInline);
+
+
+
+
+// Filter Method
+console.log("----------- Filter Operator -----------");
+// Given an array of integers, return only the even elements
+console.log("----------- Even Elements -----------");
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 console.log("Array -> ", arr);
-console.log("Using Loop -> ", square);
+
+// Approach-1: Using Loop
+let evenElement = [];
+arr.forEach((x) => {
+    if (x % 2 === 0) evenElement.push(x);
+})
+console.log("Using Loop -> ", evenElement);
 
 
-// Approach-2: Function
-function squareArray(arr) {
-    let squareUsingFunction = [];
-    let n = arr.length;
-    for (let i = 0; i < n; i++) {
-        let x = Math.pow(arr[i], 2);
-        squareUsingFunction.push(x);
-    }
-    return squareUsingFunction;
-}
-
-console.log("Using Function -> ", squareArray(arr));
-
-// Approach-3: Map Operator
-let squareUsingMap = arr.map(function(element) {
-    return element * element;
+// Approach-2: Using Filter Operator
+const evenElementUsingFilter = arr.filter(function even(element) {
+    return element % 2 === 0;
 })
 
-console.log("Using Map -> ", squareUsingMap);
+console.log("Using Filter Function -> ", evenElementUsingFilter);
 
-let squareMapInline = arr.map(element => element * element);
-console.log("Inline Map -> ", squareMapInline);
+const evenElementInline = arr.filter (element => element % 2 === 0);
+console.log("Using Inline Filter -> ", evenElementInline);
 
 
-// Convert USD to Rupees
-const usd = [100, 15000, 180];
-const conversationRatio = 84;
+console.log("----------- Positive Elements -----------");
+arr = [1, -2, 3, -4, 5, -6, 7, -8, 9, -10];
+console.log("Array -> ", arr);
 
-let conversionUsingMap = usd.map(function(element) {
-    return element * conversationRatio;
+// Approach-1: Using Loop
+let positivElements = [];
+arr.forEach((x) => {
+    if (x > 0) positivElements.push(x);
+})
+console.log("Using Loop -> ", positivElements);
+
+// Approach-2: Filter Function
+let positivElementsUsingFilter = arr.filter(function(element) {
+    return element > 0;
 })
 
-console.log("INR Conversion Using Map -> ", conversionUsingMap);
+console.log("Using Filter Function -> ", positivElementsUsingFilter);
 
 
-let conversionInline =  usd.map(element => element * conversationRatio);
-console.log("Inline Conversion -> ", conversionInline);
+let positivElementsInline = arr.filter(element => element > 0);
+console.log("Using Inline Filter -> ", positivElementsInline);
+
