@@ -1,3 +1,4 @@
+// JavaScript-4: Functional Programming
 // CallBack Functions
 // Passing function as an argument to other function
 // function printName(callBack) {
@@ -59,30 +60,83 @@
 // console.log(sum(1, 2));
 
 
+
+// 
+// Higher Order Functions
 // Given an array, which has radius for different circles, we need to find area, circumference, diameter for all radiuses
 
-function area(radius) {
-    return Math.PI * radius * radius;
+// function area(radius) {
+//     return Math.PI * radius * radius;
+// }
+
+// function circumference(radius) {
+//     return 2 * Math.PI * radius;
+// }
+
+// function diameter(radius) {
+//     return 2 * radius;
+// }
+
+// function circleCalc(radius, callBack) {
+//     return callBack(radius);
+// }
+
+// let radiusArray = [2, 3, 4, 7, 9];
+
+// console.log("Radiuses are ", radiusArray);
+// radiusArray.forEach((x) => {
+//     console.log("x -> ", x);
+//     console.log(circleCalc(x, area));
+//     console.log(circleCalc(x, circumference));
+//     console.log(circleCalc(x, diameter));
+// }) 
+
+
+// Given an array of integers, return Square of them
+// Approach-1: Loop
+let arr = [1, 2, 3];
+let square = [];
+arr.forEach((x) => {
+    square.push(x * x);
+})
+console.log("Array -> ", arr);
+console.log("Using Loop -> ", square);
+
+
+// Approach-2: Function
+function squareArray(arr) {
+    let squareUsingFunction = [];
+    let n = arr.length;
+    for (let i = 0; i < n; i++) {
+        let x = Math.pow(arr[i], 2);
+        squareUsingFunction.push(x);
+    }
+    return squareUsingFunction;
 }
 
-function circumference(radius) {
-    return 2 * Math.PI * radius;
-}
+console.log("Using Function -> ", squareArray(arr));
 
-function diameter(radius) {
-    return 2 * radius;
-}
+// Approach-3: Map Operator
+let squareUsingMap = arr.map(function(element) {
+    return element * element;
+})
 
-function circleCalc(radius, callBack) {
-    return callBack(radius);
-}
+console.log("Using Map -> ", squareUsingMap);
 
-let radiusArray = [2, 3, 4, 7, 9];
+let squareMapInline = arr.map(element => element * element);
+console.log("Inline Map -> ", squareMapInline);
 
-console.log("Radiuses are ", radiusArray);
-radiusArray.forEach((x) => {
-    console.log("x -> ", x);
-    console.log(circleCalc(x, area));
-    console.log(circleCalc(x, circumference));
-    console.log(circleCalc(x, diameter));
-}) 
+
+// Convert USD to Rupees
+const usd = [100, 15000, 180];
+const conversationRatio = 84;
+
+let conversionUsingMap = usd.map(function(element) {
+    return element * conversationRatio;
+})
+
+console.log("INR Conversion Using Map -> ", conversionUsingMap);
+
+
+let conversionInline =  usd.map(element => element * conversationRatio);
+console.log("Inline Conversion -> ", conversionInline);
