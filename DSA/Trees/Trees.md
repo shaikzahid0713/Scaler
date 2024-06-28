@@ -1,5 +1,6 @@
 # [Trees](Trees.cpp)
 - [Introduction](#introduction)
+- [Traversals](#tree-traversals)
 - [Resources](#resources)
 
 ## Introduction
@@ -11,6 +12,21 @@
     - Every node must have maximum of 2 children only i.e, 0-2.
     ![Binary Tree](../Assets/binary_tree.png)
 
+### Structure of a Binary Tree
+```c++
+class Node {
+public:
+    int data = 0;
+    Node *left;
+    Node *right;
+
+    Node(int data) {
+        this->data = data;
+        this->left = NULL;
+        this->right = NULL;
+    }
+};
+```
 
 ### Height of a Tree
 - Length of the longest path from the `root` to any of its `descendent leaf node`.
@@ -25,14 +41,55 @@
     ![Depth of a Tree](../Assets/Tree_Depth.png)
 
 
-### Structure of a Tree
-```c++
-class Node {
-    int data;
-    Node left;
-    Node right;
+
+
+
+## Tree Traversals
+There are three traversals of a tree
+- PreOrder Traversal
+- InOrder Traversal
+- PostOrder Traversal
+
+### PreOrder Traversal
+- Order of Execution: Root-Left-Right
+![PreOrder Traversal](../Assets/PreOrder_Traversal.png)
+```cpp
+void preOrderTraversal(Node *root) {
+    if (root == NULL)
+        return;
+    cout << root->data << " "; // Root
+    preOrderTraversal(root->left); // Left
+    preOrderTraversal(root->right); // Right
 }
 ```
+
+### InOrder Traversal
+- Order of Execution: Left-Root-Right
+![InOrder Traversal](../Assets/InOrder_Traversal.png)
+```cpp
+void inOrderTraversal(Node *root) {
+    if (root == NULL)
+        return;
+    inOrderTraversal(root->left); //Left
+    cout << root->data << " ";  // Root
+    inOrderTraversal(root->right); // Right
+}
+```
+
+
+### PostOrder Traversal
+- Order of Execution: Left-Right-Root
+![PostOrder Traversal](../Assets/PostOrder_Traversal.png)
+```cpp
+void postOrderTraversal(Node *root) {
+    if (root == NULL)
+        return;
+    postOrderTraversal(root->left); //Left
+    postOrderTraversal(root->right); // Right
+    cout << root->data << " "; // Root
+}
+```
+
 
 ## Resources
 - [Programmiz](https://www.programiz.com/dsa/trees)
