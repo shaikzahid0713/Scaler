@@ -76,6 +76,24 @@ void postOrderTraversal(Node *root) {
     cout << root->data << " ";
 }
 
+void IterativePostOrderTraversal(Node *root) {
+    stack<Node*> postOrderStack;
+    Node* current = root;
+    while(!postOrderStack.empty() || current) {
+        if (current) {
+            postOrderStack.emplace(current);
+            current = current->left;
+        }
+        else {
+            current = current->right;
+            current = postOrderStack.top();
+            postOrderStack.pop();
+            cout << current->data << " ";
+        }
+    }
+    cout << "\n";
+}
+
 void preOrderTraversal(Node *root)
 {
     if (root == NULL)
@@ -119,6 +137,11 @@ int main()
     cout << "\n";
 
     cout << "------------- Post Order Traversal -----------" << "\n";
+    postOrderTraversal(root);
+    cout << "\n";
+
+
+    cout << "------------- Iterative Post Order Traversal -----------" << "\n";
     postOrderTraversal(root);
     cout << "\n";
 }
