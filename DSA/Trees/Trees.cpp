@@ -1,5 +1,7 @@
 #include <iostream>
 #include <math.h>
+#include <vector>
+#include <stack>
 
 using namespace std;
 
@@ -47,6 +49,25 @@ void inOrderTraversal(Node *root) {
     inOrderTraversal(root->right);
 }
 
+void IterativeInOrderTraversal(Node *root) {
+    stack<Node*> inOrder;
+    Node* current = root;
+    while (inOrder.size() > 0 || current) {
+        if (current) {
+            inOrder.push(current);
+            current = current->left;
+        }
+        else {
+            current = inOrder.top();
+            inOrder.pop();
+            cout << current->data << " ";
+            current = current->right;
+
+        }
+    }
+    cout << "\n";
+}
+
 void postOrderTraversal(Node *root) {
     if (root == NULL)
         return;
@@ -92,7 +113,11 @@ int main()
     cout << "------------- In Order Traversal -----------" << "\n";
     inOrderTraversal(root);
     cout << "\n";
-    
+
+    cout << "------------- Iterative In Order Traversal -----------" << "\n";
+    IterativeInOrderTraversal(root);
+    cout << "\n";
+
     cout << "------------- Post Order Traversal -----------" << "\n";
     postOrderTraversal(root);
     cout << "\n";
