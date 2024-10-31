@@ -36,22 +36,7 @@ Output: ReferenceError: Cannot access 'msg' before initialization
 
 
 
-1. JavaScript does not actually move your code around before executing. I know I talk a lot about how JavaScript will act like it moves your functions to the top of your file, but it doesn't actually do this moving. In reality what happens is it first reads your code before executing the code so it knows which functions you have defined before executing. This is really not important, though, as all that matters is how the code actually works and not what happens with your code when the computer parses it.
 
-2. One thing I did not mention in this video is how hoisting works within scopes. For example if you define a function called a and inside that a function you define another function called b the b function would only be hoisted to the top of the a function since the b function is inside the scope of the a function. I probably should have covered this, but this topic is more related to scoping which could be its entirely own video.
-
-3. Technically, let and const are actually hoisted, but they are not initialized with a value which is why you get an error when trying to use them before they are declared. The code example people use to demonstrate this generally looks like this.
-
-function log(){
-  console.log(value)
-}
-
-let value = 1
-log() //output: 1
-
-In this example value is technically used above where it is declared, but it is used inside a function that is called after value is defined which is why there is no error. In some programming languages this would cause an error, but not in JavaScript. For these types of examples you can still use the top to bottom nature of JavaScript to understand what is happening and see why this works. First we define a function called log. None of the code in this function is executed when we define it so we can ignore the code in the function for now. Next we define a variable called value and set it to 1. Finally we call the log function we defined previously which prints out the variable value. As you can see from this top to bottom example the variable value is only ever used after it is defined which is why there is no error and for all intents and purposes you can treat let/const as if they are not hoisted since they are not able to be used before initialization like var/function.
-
-Now the reason I did not include all this information is for 2 reasons (I did not know some of it, and it is irrelevant). The point of this video is to help someone that does not understand hoisting understand what it is, how you can use it, and why it is important. I could have made this video 10-20 minutes long and talked about every edge case and technicality behind hoisting, but that needlessly bloats the video, makes things much more complicated for someone just learning hoisting, and goes against everything my channel is about. I called the channel Web Dev Simplified for a reason. I want to simplify the web for everyone and not worry about technicalities that don't impact how your program day to day.
 
 
 
