@@ -21,7 +21,7 @@
 // }
 
 // parent();
-// This will provide reference error, since a is not in global scope
+// // This will provide reference error, since a is not in global scope
 // console.log(a);
 
 // Output: 20
