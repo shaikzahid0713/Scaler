@@ -3,7 +3,6 @@
 // function parent() {
 //     console.log(a);
 // }
-
 // parent();
 
 // Here 'a' is a global variable, so parent function can access it
@@ -121,4 +120,4 @@ function compare(a, b) {
 }
 
 
-console.log(compare(51, 6));
+console.log(compare(51, 6)); 

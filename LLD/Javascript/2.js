@@ -4,7 +4,7 @@ function sayHi() {
 }
 
 
-// sayHi();    // Function Calling
+// sayHi();    // Function Calling Function
 
 
 // Function as Expression 
@@ -69,4 +69,5 @@ let jk = (a, b) => {
 }
 
 console.log(jk(5,44));
+console.log(jk(10, 15));
 
