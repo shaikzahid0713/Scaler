@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="parent">
+      <button id="click_me">Click Me</button>
+      <p>I am appended when you click the button</p>
+    </div>
+
+    <ul>
+        <!-- 
+            get all elements in LI
+            get UL
+            find 7th and 9th element
+            create li for 8
+            append li between 7 and 9
+         -->
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+
+
+    <!-- 
+        Custom Attributes, also known as Data attributes
+        When you want to add any extra information in an html element, you use custom attributes
+    -->
+
+    <div class="card_parent">
+        <div class="card" data-color="red"></div>
+        <div class="card" data-color="blue"></div>
+        <div class="card" data-color="green"></div>
+        <div class="card" data-color="red"></div>
+        <div class="card" data-color="blue"></div>
+        <div class="card" data-color="green"></div>
+        <div class="card" data-color="red"></div>
+        <div class="card" data-color="blue"></div>
+        <div class="card" data-color="green"></div>
+    </div>
+
+    <!-- 
+    Write a script that fetches the data-color attribute to that card
+    Double clicking on them will attach the fetched-class to that card
+    Also change the data-color attribute to "used"
+    -->
+
+
+    <script src="script.js"></script>
+</body>
+</html>

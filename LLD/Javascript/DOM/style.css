@@ -1,0 +1,23 @@
+.card_parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
