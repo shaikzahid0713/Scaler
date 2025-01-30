@@ -12,3 +12,9 @@ for (let i = 0; i < button.length; i++) {
         event.target.parentElement.remove();
     })
 }
+
+let removeAll = document.querySelector('.deleteAll');
+removeAll.addEventListener('click', function(event) {
+    let list = document.querySelector('ul');
+    list.remove();
+})
