@@ -1,36 +1,3 @@
-.parent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.allMovies {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-#movies {
-    box-sizing: border-box;
-    margin: 50px;
-    height: 200px;
-    width: 200px;
-    border: 1px solid black;
-    background-color: rgb(252, 128, 12);
-    font-weight: bolder;
-}
-
-#header {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-#content {
-    color: white;
-    text-align: center;
-    padding-top: 15%;
-    font-size: xx-large;
+p {
+    margin-bottom: 1000px;
 }
