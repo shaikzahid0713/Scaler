@@ -1,26 +1,14 @@
+let button = document.querySelectorAll('.delete');
 
-let s1 = document.getElementById("s1");
-let s2 = document.getElementById("s2");
-let s3 = document.getElementById("s3");
-// Size and properties of an element - https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
-let topOfPage = document.querySelector('html').getBoundingClientRect().height;
+/* 
+For each .delete button, an event listener is added that listens for a click event. When the button is clicked:
 
-document.addEventListener('keydown', function(event) {
-    console.log(event.key);
-    let key = event.key;
-    if (key === '1') {
-        s1.scrollIntoView();
-    }
-    else if (key === '2') {
-        s2.scrollIntoView();
-    }
-    else if (key === '3') {
-        s3.scrollIntoView();
-    }
-    else if (key === 't') {
-        window.scrollBy(0, -topOfPage)
-    }
-    else if (key === 'b') {
-        window.scrollBy(0, topOfPage)
-    }
-});
+The event's target is the button itself (button[i]).
+event.target.parentElement.remove() removes the parent element of the clicked button (likely the whole ticket or item container).
+*/
+
+for (let i = 0; i < button.length; i++) {
+    button[i].addEventListener('click', function(event) {
+        event.target.parentElement.remove();
+    })
+}
