@@ -1,20 +1,22 @@
-let button = document.querySelectorAll('.delete');
+let double = document.getElementById('double');
 
-/* 
-For each .delete button, an event listener is added that listens for a click event. When the button is clicked:
+double.addEventListener('click', function(event) {
+    let first = document.createElement('button');
+    first.setAttribute('class', 'first');
+    first.innerText = 'First';
 
-The event's target is the button itself (button[i]).
-event.target.parentElement.remove() removes the parent element of the clicked button (likely the whole ticket or item container).
-*/
+    let second = document.createElement('button');
+    second.setAttribute('class', 'second');
+    second.innerText = 'Second';
 
-for (let i = 0; i < button.length; i++) {
-    button[i].addEventListener('click', function(event) {
-        event.target.parentElement.remove();
-    })
-}
+    double.parentElement.appendChild(first);
+    double.parentElement.appendChild(second);
 
-let removeAll = document.querySelector('.deleteAll');
-removeAll.addEventListener('click', function(event) {
-    let list = document.querySelector('ul');
-    list.remove();
+
+    console.log(event.target);
+    console.log(event.currentTarget);
+    
+    event.target.remove();
+    // event.currentTarget.removeChild(event.target);
+    
 })
