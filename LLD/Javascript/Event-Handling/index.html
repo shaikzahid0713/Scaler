@@ -4,12 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="parent">
-        <button id="click-btn" data-btn="first">Click Me</button>
-        <button id="click" data-btn="second">Click</button>
+        <h1>Book My Show</h1>
+        <select name="movie_type" id="movie_type">
+            <option value="none">None</option>
+            <option value="action">Action</option>
+            <option value="romance">Romance</option>
+            <option value="comedy">Comedy</option>
+        </select>
     </div>
+
+        <div class="allMovies">
+            <div id="movies" data-category="action">
+                <div id="header">Action Movie-1</div>
+                <p id="content">RS 100</p>
+            </div>
+            <div id="movies" data-category="action">
+                <div id="header">Action Movie-2</div>
+                <p id="content">RS 100</p>
+            </div>
+            <div id="movies" data-category="action">
+                <div id="header">Action Movie-3</div>
+                <p id="content">RS 100</p>
+            </div>
+            <div id="movies" data-category="action">
+                <div id="header">Action Movie-4</div>
+                <p id="content">RS 100</p>
+            </div>
+            <div id="movies" data-category="romance">
+                <div id="header">Romance Movie-1</div>
+                <p id="content">RS 100</p>
+            </div>
+            <div id="movies" data-category="romance">
+                <div id="header">Romance Movie-2</div>
+                <p id="content">RS 100</p>
+            </div>
+            <div id="movies" data-category="action">
+                <div id="header">Action Movie-5</div>
+                <p id="content">RS 100</p>
+            </div>
+            <div id="movies" data-category="romance">
+                <div id="header">Romance Movie-3</div>
+                <p id="content">RS 100</p>
+            </div>
+            <div id="movies" data-category="comedy">
+                <div id="header">Comedy Movie-1</div>
+                <p id="content">RS 100</p>
+            </div>
+            <div id="movies" data-category="comedy">
+                <div id="header">Comedy Movie-2</div>
+                <p id="content">RS 100</p>
+            </div>
+        </div>
+
 
     <script src="script.js"></script>
 </body>
