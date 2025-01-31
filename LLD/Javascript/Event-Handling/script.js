@@ -1,22 +1,11 @@
-let double = document.getElementById('double');
+let currentCell = document.querySelector('.cell');
+console.log(currentCell);
+currentCell.addEventListener('pointermove', function(event) {
+    currentCell.style.backgroundImage = "url('https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/055/850/original/jail.jpg?1699030242')";
 
-double.addEventListener('click', function(event) {
-    let first = document.createElement('button');
-    first.setAttribute('class', 'first');
-    first.innerText = 'First';
+})
 
-    let second = document.createElement('button');
-    second.setAttribute('class', 'second');
-    second.innerText = 'Second';
+currentCell.addEventListener('pointerleave', function(event) {
+    currentCell.style.backgroundImage = "";
 
-    double.parentElement.appendChild(first);
-    double.parentElement.appendChild(second);
-
-
-    console.log(event.target);
-    console.log(event.currentTarget);
-    
-    event.target.remove();
-    // event.currentTarget.removeChild(event.target);
-    
 })
