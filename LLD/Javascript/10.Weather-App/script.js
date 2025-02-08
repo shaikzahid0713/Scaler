@@ -36,8 +36,17 @@ function updateElements(getCity, getTime, getTemp, getImage, getWeatherCondition
    const weatherCondition = document.getElementById('condition');
 
    city.innerText = getCity;
-   time.innerText = getTime;
+   time.innerText = updateTime(getTime);
    temp.innerText = getTemp;
    weatherCondition.innerText = getWeatherCondition;
    image.src = getImage;
+}
+
+function updateTime(target) {
+   let finalTime = target.split(' ')[1];
+   let date = target.split(' ')[0];
+   let day = new Date(date).getDay();
+   day = weekDay[day];
+
+   return `${finalTime} ${day} ${date}`;
 }
