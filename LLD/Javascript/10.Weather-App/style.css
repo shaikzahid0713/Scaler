@@ -27,7 +27,7 @@
   margin: 0.625rem;
 }
 
-.weather1 {
+.weather .temp {
   font-size: 4rem;
 }
 
@@ -39,11 +39,11 @@
   font-size: 0.75rem;
 }
 
-.weather3 span {
+.weather .weather_condition span {
   margin: 0.3rem;
 }
 
-.weather3 img {
+.weather .weather_condition img {
   width: 2rem;
 }
 

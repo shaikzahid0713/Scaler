@@ -9,10 +9,10 @@ const weekDay = {
 }
 
 
-let search_btn = document.getElementById('search_city');
+let search_btn = document.querySelector('button');
 search_btn.addEventListener('click', function(event) {
    event.preventDefault();
-   const targetCity = document.getElementById('city_name').value;
+   const targetCity = document.querySelector('.searchField').value;
    console.log(targetCity);
    fetchData(targetCity);
 })
@@ -21,19 +21,19 @@ search_btn.addEventListener('click', function(event) {
 async function fetchData(targetCity) {
    let getUrl = `https://api.weatherapi.com/v1/current.json?key=ae078b45e77a4b70a31120233253101&q=${targetCity}&aqi=no`;
    let getData = await fetch(getUrl);
-   let actualData = await getData.json();
-   console.log(actualData);
+   let weatherApiData = await getData.json();
+   console.log(weatherApiData);
 
-   updateElements(actualData.location.name, actualData.location.localtime, actualData.current.temp_f, actualData.current.condition.icon, actualData.current.condition.text);
+   updateElements(weatherApiData.location.name, weatherApiData.location.localtime, weatherApiData.current.temp_f, weatherApiData.current.condition.icon, weatherApiData.current.condition.text);
 }
 
 
 function updateElements(getCity, getTime, getTemp, getImage, getWeatherCondition) {
-   const city = document.getElementById('city');
-   const time = document.getElementById('time');
-   const temp = document.getElementById('temp');
-   const image = document.getElementById('image');
-   const weatherCondition = document.getElementById('condition');
+   const city = document.querySelector('.city');
+   const time = document.querySelector('.time');
+   const temp = document.querySelector('.temp');
+   const image = document.querySelector('.weather_condition img');
+   const weatherCondition = document.querySelector('.weather_condition span');
 
    city.innerText = getCity;
    time.innerText = updateTime(getTime);
