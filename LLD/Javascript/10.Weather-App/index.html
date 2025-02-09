@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Kanban</title>
 </head>
 <body>
-    <div class="parent">
-        <div class="top">
-            <p id="temp">75.6</p>
-            <div class="location">
-                <p id="city">Banglore</p>
-                <p id="time">1-10-2024 7:58 PM</p>
+    <div class = "container">
+        <div class = "weather">
+            <div class = "temp">20</div>
+            <div class = "time_location">
+                <p class="city">Location</p>
+                <span class="dateF">Random time and Date</span>
             </div>
-            <div class="weather">
-                <img src="//cdn.weatherapi.com/weather/64x64/night/143.png" alt="Cloudy" id="image">
-                <p id="condition">Text</p
+
+            <div class = "weather_condition">
+                 <p><img src = "" alt = ""></p>
+                 <span>Condition</span>
             </div>
-        </div>
-        </div>
-        <div class="bottom">
-            <nav>
-                <form>
-                        <input type="text" id="city_name">
-                        <button id="search_city">Search</button>
-                </form>
-            </nav>
         </div>
     </div>
+
+
+    <nav>
+        <form>
+            <input type = "text" placeholder = "Search Location" class = "searchField">
+            <button type = "submit">Search</button>
+        </form>
+    </nav>
 
     <script src="script.js"></script>
 </body>
