@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Kanban Board</title>
+</head>
+<body>
+    <header>
+        <div class="priority_container">
+            <div class="priority lightgreen"></div>
+            <div class="priority lightyellow"></div>
+            <div class="priority lightpink"></div>
+            <div class="priority black"></div>
+        </div>
+
+        <div class="manage_tasks_container">
+            <div class="add-btn">
+                <span>+</span>
+            </div>
+            <div class="remove-btn">
+                <span>x</span>
+            </div>
+        </div>
+
+        <div class="navbar">
+            <nav>
+                <form action="submit">
+                    <input type="text" name="" id="search_task">
+                </form>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-content">
+    </div>
+
+    <div class="modal-content hide">
+        <div class="left-content">
+            <textarea name="task-description" id="task_description"></textarea>
+        </div>
+        <div class="right-content">
+            <div class="modal-priority lightgreen"></div>
+            <div class="modal-priority lightyellow"></div>
+            <div class="modal-priority lightpink"></div>
+            <div class="modal-priority black"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+Hadith API - $2y$10$Sf4uT71bxRNUYoOgHxO2UOWp7FRCSBeQyP53fxUQEjD41J5yaLTW - https://hadithapi.com/
+Quran API - https://alquran.cloud/api

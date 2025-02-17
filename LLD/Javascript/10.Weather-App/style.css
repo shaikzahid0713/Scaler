@@ -39,12 +39,15 @@
   font-size: 0.75rem;
 }
 
+
+
 .weather .weather_condition span {
   margin: 0.3rem;
 }
 
 .weather .weather_condition img {
   width: 2rem;
+  margin-left: 10%;
 }
 
 nav {

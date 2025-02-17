@@ -6,8 +6,16 @@ function toggleModal(isHidden) {
 }
 
 function createNewTask(targetValue) {
+    const newTask = `
+    <div class="task-priority"></div>
+    <div class="task-title">123</div>
+    <div class="task-description" contenteditable>${targetValue}</div>`;
 
+    const taskDiv = document.createElement('div');
+    taskDiv.classList.add('task');
+    taskDiv.innerHTML = newTask;
 
+    mainContentRef.appendChild(taskDiv);
 }
 
 const toggleModalRef = document.querySelector('.manage_tasks_container .add-btn');
@@ -20,16 +28,8 @@ toggleModalRef.addEventListener('click', function () {
 const newTaskCreation = document.getElementById('task_description');
 newTaskCreation.addEventListener('keydown', function (event) {
     if (event.key == 'Enter') {
-        // createNewTask();
-        const newTask = `
-        <div class="task-priority"></div>
-        <div class="task-title">123</div>
-        <div class="task-description">12345</div>`;
-        const taskDiv = document.createElement('div');
-        console.log(taskDiv);
-        taskDiv.classList.add('task');
-        console.log(taskDiv);
-        taskDiv.innerHTML = newTask;
         toggleModal(false);
+        createNewTask(event.target.value);
+        event.target.value = "";
     }
 })

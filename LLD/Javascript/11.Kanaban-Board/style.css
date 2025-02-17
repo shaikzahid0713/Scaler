@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 100px;
+  background-color: #4B4B4B;
+  display: flex;
+  align-items: center;
+}
+
+
+.priority_container {
+  height: 50px;
+  background-color: green;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 80px;
+}
+
+
+.priority_container .priority {
+  height: 30px;
+  width: 50px;
+  margin: 15px;
+}
+
+.priority_container .priority::hover {
+  background-color: #485460;
+}
+
+
+.lightyellow {
+  background-color: lightyellow;
+}
+
+.lightgreen {
+  background-color: lightgreen;
+}
+
+.lightpink {
+  background-color: lightpink;
+}
+
+.black {
+  background-color: black;
+}
+
+
+.manage_tasks_container {
+  height: 50px;
+  background-color: darkcyan;
+  margin-left: 50px;
+  display: flex;
+}
+
+.add-btn, .remove-btn{
+  box-sizing: border-box;
+  height: 100%;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.add-btn:hover, .remove-btn:hover{
+  background-color: #4BB5B3;
+  transition: .3s ease-in;
+}
+
+.navbar {
+  margin-left: 50px;
+}
+
+#search_task {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.main-content .task {
+  min-width: 250px;
+  margin: 20px;
+  border: 1px solid black;
+  background-color: coral;
+}
+
+.main-content .task .task-priority {
+  border-bottom: 1px solid black;
+  height: 20px;
+}
+
+.main-content .task .task-title {
+  padding: 5px 0 5px 5px;
+  font-size: 25px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.main-content .task .task-description {
+  padding: 5px 0 5px 5px;
+  height: 150px;
+}
+
+.modal-content {
+  display: flex;
+  background-color: aqua;
+  border: 1px solid black;
+  width: 750px;
+  height: 400px;
+  margin: 10px;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hide {
+  display: none;
+}
+
+
+.modal-content .left-content {
+  min-width: 600px;
+}
+
+.modal-content .left-content #task_description {
+  width: 100%;
+  height: 100%;
+  resize: none;
+}
+
+.modal-content .right-content {
+  /* border-left: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.modal-content .right-content .modal-priority {
+  height: 50px;
+  width: 100px;
+  margin: 25px;
+}
