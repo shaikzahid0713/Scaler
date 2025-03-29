@@ -57,22 +57,27 @@ header {
 
 main {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2.5rem;
     margin: 2.5rem;
 }
 
 .ticket-container {
-    background-color: aqua;
     min-height: 15rem;
     width: 15rem;
     padding: .5rem;
-    /* margin: 2rem; */
     position: relative;
     border-radius: 5px;
 }
 
+.ticket-id {
+    text-align: center;
+    font-weight: bold;
+}
+
+.ticket-description {
+    margin-top: 0.5rem;
+}
 
 .ticket-lock {
     position: absolute;
@@ -82,13 +87,15 @@ main {
 }
 
 .modal-container {
-    height: 18rem;
+    height: 20rem;
     width: 40rem;
     display: flex;
     position: absolute;
-    top: 25%;
-    left: 25%;
+    top: 50%;
+    left: 50%;
     border: black 1px solid;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .modal-container #modal-ticket-description {
@@ -128,4 +135,12 @@ main {
 
 .lightblue {
     background-color: lightblue;
+}
+
+.hide {
+    display: none;
+}
+
+.active {
+    border: 3px solid yellow;
 }

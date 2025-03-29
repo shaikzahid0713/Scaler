@@ -149,7 +149,12 @@ Solution 1 (reordering CSS rules) is the cleanest approach as it:
 - Avoids unnecessary specificity
 - Doesn't use `!important`
 ```
-summary>Why we prefer classes over ids in html</summary>
+</details>
+
+
+
+<details>
+<summary>Why we prefer classes over ids in html</summary>
 ### **Why Prefer Classes Over IDs in HTML Tags?**  
 
 #### **1. Reusability**  
