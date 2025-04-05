@@ -24,7 +24,7 @@ header {
 .color {
     height: 1.5rem;
     width: 3rem;
-    background-color: lightsalmon;
+    background-color: white;
     margin: .75rem;
 }
 
@@ -62,29 +62,6 @@ main {
     margin: 2.5rem;
 }
 
-.ticket-container {
-    min-height: 15rem;
-    width: 15rem;
-    padding: .5rem;
-    position: relative;
-    border-radius: 5px;
-}
-
-.ticket-id {
-    text-align: center;
-    font-weight: bold;
-}
-
-.ticket-description {
-    margin-top: 0.5rem;
-}
-
-.ticket-lock {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin: 2px;
-}
 
 .modal-container {
     height: 20rem;
@@ -124,6 +101,51 @@ main {
     background-color: lightsalmon;
 }
 
+.priority-change-container {
+    height: 4rem;
+    width: 16rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: (-50%, -50%);
+    display: flex;
+    z-index: 1;
+    border: 1px solid black;
+}
+
+.priority-color {
+    background-color: lightsalmon;
+    height: 100%;
+    width: 25%;
+}
+
+.ticket-container {
+    min-height: 15rem;
+    width: 15rem;
+    padding: .5rem;
+    position: relative;
+    background-color: lightsalmon;
+    border-radius: 5px;
+}
+
+.ticket-id {
+    text-align: center;
+    font-weight: bold;
+}
+
+.ticket-description {
+    margin-top: 0.5rem;
+    height: 25%;
+    overflow-wrap: break-word;
+}
+
+.ticket-lock {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 5px;
+}
+
 
 .lightpink {
     background-color: lightpink;
@@ -137,10 +159,19 @@ main {
     background-color: lightblue;
 }
 
+.lightsalmon {
+    background-color: lightsalmon;
+}
+
 .hide {
     display: none;
 }
 
 .active {
-    border: 3px solid yellow;
+    border: 3px solid #AE445A;
 }
+
+[contenteditable] {
+    border: none !important;  /* Removes border completely */
+    outline: none !important; /* Removes focus outline (optional) */
+  }
