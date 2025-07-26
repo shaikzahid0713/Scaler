@@ -1,0 +1,12 @@
+button {
+    background-color: black;
+    color: white;
+    margin: 0.3rem;
+    padding: 0.3rem;
+    border: none;
+    font-size: 1rem;
+}
+
+.counter {
+    border: 1px solid black;
+}
